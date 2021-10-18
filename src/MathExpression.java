@@ -109,20 +109,23 @@ public class MathExpression {
         return buf.toString();
     }
     int toArab(String romanNumber){
-        int resultNumber = 0;
-        for(int i = 0; i < romanNumber.length(); i++){
-            switch (romanNumber.charAt(i)){
-                case'I': resultNumber+= 1; break;
-                case'V': resultNumber+= 5; break;
-                case'X': resultNumber+= 10; break;
-                case'L': resultNumber+= 50; break;
-                case'C': resultNumber+= 100; break;
+            switch (romanNumber){
+                case"I": return 1;
+                case"II": return 2;
+                case"III": return 3;
+                case"IV": return 4;
+                case"V": return 5;
+                case"VI": return 6;
+                case"VII": return 7;
+                case"VIII": return 8;
+                case"IX": return 9;
+                case"X": return 10;
                 default:
-                    throw new IllegalStateException("Unexpected value: " + romanNumber.charAt(i));
+                    throw new IllegalStateException("Unexpected value: " + romanNumber);
             }
         }
-        return resultNumber;
-    }
+
+
 
     String getResult() {
         if(result == 200){
